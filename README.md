@@ -1,7 +1,7 @@
 ### Hi 👋
 
 
-***I'm Ehab,***
+I'm Ehab,
 
 ***A passionate Software Developer currently mostly working with Flutter.***
 
