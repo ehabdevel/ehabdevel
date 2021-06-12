@@ -17,3 +17,9 @@
 
 
 
+## License
+
+MIT
+
+**Free Software**
+
