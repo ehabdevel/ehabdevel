@@ -9,3 +9,5 @@
 - 📫 How to reach me: https://ehabdevel.github.io/ ...
 
 <a href="https://stackoverflow.com/users/7305270/ehabdevel"><img src="https://stackoverflow.com/users/flair/7305270.png?theme=dark" width="208" height="58" alt="profile for ehabdevel at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for ehabdevel at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=ehabdevel&show_icons=true)](https://github.com/ehabdevel/github-readme-stats)
