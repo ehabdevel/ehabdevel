@@ -1,7 +1,9 @@
-### Hi there 👋
+### Hi 👋
 
 
-***I'm Ehab, a passionate Software Developer currently mostly working with Flutter.***
+***I'm Ehab,***
+
+***A passionate Software Developer currently mostly working with Flutter.***
 
 - 🔭 I’m mostly working on Flutter, Javascript, PHP(WordPress), Vue, React ...
 - 🌱 As an always learner, i'm curious to learn a bit of everything ...
