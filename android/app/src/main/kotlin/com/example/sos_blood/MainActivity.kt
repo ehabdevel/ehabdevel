@@ -1,0 +1,6 @@
+package com.example.sos_blood
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
