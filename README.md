@@ -3,8 +3,8 @@
 A new Flutter project.
 
 <p align="center">
-  <img src="https://github.com/ehabdevel/sos_blood/blob/master/screen1.jpeg" />
-  <img src="https://github.com/ehabdevel/sos_blood/screenshoots/screen2.jpeg" />
+  <img src="https://github.com/ehabdevel/sos_blood/blob/main/screenshoots/screen1.jpeg" />
+  <img src="https://github.com/ehabdevel/sos_blood/blob/main/screenshoots/screen2.jpeg" />
 </p>
 
 ## Getting Started
