@@ -2,10 +2,10 @@
 
 A new Flutter project.
 
-<div align="center">
+<p align="center">
   <img src="https://github.com/ehabdevel/sos_blood/blob/main/screenshoots/screen1.jpeg" style="width: 150px; />
   <img src="https://github.com/ehabdevel/sos_blood/blob/main/screenshoots/screen2.jpeg" style="width: 150px; />
-</div>
+</p>
 
 ## Getting Started
 
