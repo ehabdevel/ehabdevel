@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import './screens/chat_screen.dart';
+// import './screens/chat_screen.dart';
+import 'welcome_screen.dart';
 
-void main() {
+// import './screens/login_screen.dart';
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const SOSBlood());
 }
 
@@ -12,11 +15,20 @@ class SOSBlood extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'SOSBlood',
       theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      home: const ChatScreen(),
+          primarySwatch: Colors.teal,
+          textButtonTheme: TextButtonThemeData(
+              style: TextButton.styleFrom(
+            primary: Colors.teal,
+            // primary: const Color(0xFF00897B),
+            textStyle: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
+            ),
+          ))),
+      home: const WelcomeScreen(),
     );
   }
 }
