@@ -2,15 +2,31 @@
 
 A new Flutter project.
 
+<p align="center">
+  <img src="https://github.com/ehabdevel/sos_blood/blob/master/screen1.jpeg" />
+  <img src="https://github.com/ehabdevel/sos_blood/blob/master/screen2.jpeg" />
+</p>
+
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a starting point for a SOSBlood application.
 
-A few resources to get you started if this is your first Flutter project:
+## The problem we are trying to solve
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+It is not something surprising that the blood transfusions centers all over the world are suffering from a lack of stock. and with the pandemic the situation has become even worse and delicate.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Before the blood stock in a lot of countries allows in these best cases to cover the needs of 15 days of consumption. Nevertheless, with the covid19 it barely arrives at a stock of 24 hours. the situation is therefore become critical and terrible !! And it is more or less almost the same situation everywhere in the world. The same for a person with a rare blood type it is even worse if he ever has  something bad happens suddenly,  probably he will lose his life if he doesnt know a person who have the same sangauin type.
+
+## The solution
+
+1- Allow the users to announce the needed blood type, when ever they need to. And so can the other users see them.
+
+2- Provide a way of communication between those who needs blood, especially the rare types, with those who wants to donate blood.
+
+3- A section of social advice and documentation on donating blood to raise awareness and support demanders and donors.
+
+4- Our application will send a reminder message to the donors after 3 months to remind them of the possibility of donating blood.
+
+## The Impact
+
+The impact of our app on society is achieved by helping people when they are weak, minimizing donor search time, and most importantly, saving lives.

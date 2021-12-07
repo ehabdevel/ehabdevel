@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'main_screen.dart';
+import 'about_app_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -11,21 +13,34 @@ class ProfileScreen extends StatelessWidget {
           child: ListView(
             children: [
               const DrawerHeader(
-                child: Text('Drawer Header'),
+                child: Center(
+                    child: Text(
+                  'SOSBlood App',
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                )),
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.teal,
                 ),
               ),
               ListTile(
-                title: const Text('Item 1'),
+                title: const Text('Home'),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MainScreen()));
                 },
               ),
               ListTile(
-                title: const Text('Item 2'),
+                title: const Text('About App'),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AboutAppScreen()));
                 },
               ),
             ],
@@ -33,51 +48,71 @@ class ProfileScreen extends StatelessWidget {
         ),
         appBar: AppBar(
           title: const Text('Profile'),
-          backgroundColor: Colors.transparent.withOpacity(0),
+          // backgroundColor: Colors.transparent.withOpacity(0),
         ),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 50,
-                  backgroundImage: NetworkImage(
-                    'https://picsum.photos/250?image=9',
+                  // backgroundImage: NetworkImage(
+                  //   'https://picsum.photos/250?image=9',
+                  // ),
+                  child: Icon(
+                    Icons.person,
+                    size: 50,
+                    color: Colors.white,
                   ),
                 ),
-                Text('Profile'),
+                const Text('Profile Name'),
+                const SizedBox(height: 10),
                 TextButton(
-                  child: Text('Logout'),
+                  child: const Text('Logout'),
                   onPressed: () {
                     Navigator.pop(context);
                   },
                 ),
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.'),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.'),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.'),
+                Expanded(
+                  child: Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ListView(
+                        shrinkWrap: true,
+                        children: const [
+                          ListTile(
+                            title: Text('Name:'),
+                            subtitle: Text('John Doe'),
+                          ),
+                          ListTile(
+                            title: Text('Email:'),
+                            subtitle: Text('email@mail.com'),
+                          ),
+                          ListTile(
+                            title: Text('Phone:'),
+                            subtitle: Text('+91 1234567890'),
+                          ),
+                          ListTile(
+                            title: Text('Address:'),
+                            subtitle: Text('Address'),
+                          ),
+                          ListTile(
+                            title: Text('Blood Group:'),
+                            subtitle: Text('A+'),
+                          ),
+                          ListTile(
+                            title: Text('Last Donated:'),
+                            subtitle: Text('12/12/2020'),
+                          ),
+                          ListTile(
+                            title: Text('About me:'),
+                            subtitle: Text(
+                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia.'),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ],

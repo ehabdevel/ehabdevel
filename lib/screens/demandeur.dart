@@ -8,8 +8,30 @@ import 'package:http/http.dart' as http;
 // import '../api/annonce_model.dart';
 
 Future<List<UtilisateurList>> fetchUtilisateurList() async {
-  final response = await http
-      .get(Uri.parse('https://sosblood.herokuapp.com/api/utilisateurs'));
+  final response = await http.get(
+    Uri.parse('https://sosblood.herokuapp.com/api/utilisateurs'),
+    headers: {
+      HttpHeaders.authorizationHeader:
+          '1e15ba4e5483e7b32f283555e3f0bc2dc8f62d99',
+      HttpHeaders.accessControlAllowOriginHeader: '*',
+      // HttpHeaders.accessControlAllowOriginHeader:
+      //     'https://sosblood.herokuapp.com/api/annonces',
+      HttpHeaders.acceptHeader: 'application/json',
+      HttpHeaders.contentTypeHeader: 'application/json',
+      HttpHeaders.accessControlAllowCredentialsHeader: 'true',
+      HttpHeaders.accessControlAllowHeadersHeader:
+          'Origin, X-Requested-With, Content-Type, Accept',
+      HttpHeaders.accessControlAllowMethodsHeader:
+          'GET, POST, PUT, DELETE, OPTIONS',
+      HttpHeaders.accessControlMaxAgeHeader: '1728000',
+      HttpHeaders.cacheControlHeader: 'no-cache',
+      HttpHeaders.pragmaHeader: 'no-cache',
+      HttpHeaders.expiresHeader: '0',
+      HttpHeaders.dateHeader: '0',
+      HttpHeaders.connectionHeader: 'keep-alive',
+      HttpHeaders.varyHeader: 'Origin',
+    },
+  );
 
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,
