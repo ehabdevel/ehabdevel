@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'screens/chat_screen.dart';
 import 'screens/main_screen.dart';
+import 'screens/login_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -19,8 +20,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             child: Image.asset(
               'assets/images/Back.jpg',
               fit: BoxFit.cover,
-              color: Colors.white.withOpacity(0.7),
-              colorBlendMode: BlendMode.darken,
             ),
           ),
           Center(
@@ -28,21 +27,31 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(
-                  'assets/images/PNG.png',
-                  fit: BoxFit.contain,
+                SizedBox(
+                  width: 300,
+                  child: Image.asset(
+                    'assets/images/PNG.png',
+                    fit: BoxFit.contain,
+                  ),
                 ),
-                const SizedBox(
-                  height: 32,
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const MainScreen()));
-                  },
-                  child: const Text('Enter'),
+                Padding(
+                  padding: const EdgeInsets.all(40.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LoginScreen(),
+                            ),
+                          );
+                        },
+                        child: const Text('Enter'),
+                      ),
+                    ],
+                  ),
                 )
               ],
             ),
