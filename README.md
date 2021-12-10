@@ -1,6 +1,7 @@
 # sos_blood
 
-A new Flutter project.
+Saving Lives Through Open Source Software.
+
 
 <p align="center">
   <img src="https://github.com/ehabdevel/sos_blood/blob/main/screenshoots/screen1.jpeg" style="width: 250px; margin: 5px;" />
