@@ -9,10 +9,10 @@ import 'package:http/http.dart' as http;
 
 Future<List<UtilisateurList>> fetchUtilisateurList() async {
   final response = await http.get(
-    Uri.parse('https://sosblood.herokuapp.com/api/utilisateurs'),
+    Uri.parse('https://jsonplaceholder.typicode.com/users'),
     headers: {
-      HttpHeaders.authorizationHeader:
-          '1e15ba4e5483e7b32f283555e3f0bc2dc8f62d99',
+      // HttpHeaders.authorizationHeader:
+      //     '1e15ba4e5483e7b32f283555e3f0bc2dc8f62d99',
       HttpHeaders.accessControlAllowOriginHeader: '*',
       // HttpHeaders.accessControlAllowOriginHeader:
       //     'https://sosblood.herokuapp.com/api/annonces',
@@ -49,24 +49,36 @@ Future<List<UtilisateurList>> fetchUtilisateurList() async {
 }
 
 class UtilisateurList {
-  // final int id;
-  // final String user;
-  final String groupage_et_rhesus;
-  final String tel;
+  // final int annonce_id;
+  final String name;
+  // final String date;
+  final int id;
+  final String username;
+  final String email;
+  // final String country;
+  // final String city;
 
   UtilisateurList({
-    // required this.id,
-    // required this.user,
-    required this.groupage_et_rhesus,
-    required this.tel,
+    // required this.annonce_id,
+    required this.name,
+    // required this.date,
+    required this.id,
+    required this.email,
+    required this.username,
+    // required this.country,
+    // required this.city,
   });
 
   factory UtilisateurList.fromJson(Map<String, dynamic> json) {
     return UtilisateurList(
-      // id: json['id'],
-      // user: json['user'],
-      groupage_et_rhesus: json['groupage_et_rhesus'],
-      tel: json['tel'],
+      // annonce_id: json['annonce_id'],
+      name: json['name'],
+      // date: json['date'],
+      id: json['id'],
+      username: json['username'],
+      email: json['email'],
+      // country: json['country'],
+      // city: json['city'],
     );
   }
 }
@@ -106,10 +118,22 @@ class _DemandeurState extends State<Demandeur> {
                     child: ListTile(
                       leading: CircleAvatar(
                         backgroundColor: Colors.red[50],
-                        child: Text(snapshot.data![index].groupage_et_rhesus),
+                        child: Text('B'),
+                        // Text(snapshot.data![index].annonce_id.toString()),
                       ),
-                      title: Text(snapshot.data![index].tel),
-                      subtitle: Text(snapshot.data![index].tel),
+                      title: Text(snapshot.data![index].username),
+                      subtitle: Text("Desc:" +
+                          snapshot.data![index].name +
+                          // " City " +
+                          // snapshot.data![index].city +
+                          // " country " +
+                          // snapshot.data![index].country +
+                          // " date " +
+                          // snapshot.data![index].date +
+                          // " statut_user " +
+                          // snapshot.data![index].statut_user +
+                          // " user id " +
+                          snapshot.data![index].id.toString()),
                       trailing: const Icon(Icons.keyboard_arrow_right),
                       onTap: () {
                         // Navigator.push(

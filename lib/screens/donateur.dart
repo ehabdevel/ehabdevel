@@ -7,7 +7,8 @@ import 'package:http/http.dart' as http;
 
 Future<List<AnnonceList>> fetchAnnonceList() async {
   final response = await http.get(
-    Uri.parse('https://sosblood.herokuapp.com/api/annonces'),
+    // Uri.parse('https://sosblood.herokuapp.com/users/'),
+    Uri.parse('https://jsonplaceholder.typicode.com/users'),
     headers: {
       "Access-Control-Allow-Origin": "*", // Required for CORS support to work
       "Access-Control-Allow-Credentials":
@@ -55,31 +56,31 @@ Future<List<AnnonceList>> fetchAnnonceList() async {
 class AnnonceList {
   // final int userId;
   final int id;
-  final String titre;
-  final String description;
-  final String date;
-  final String statut_user;
-  final String position;
+  final String username;
+  final String name;
+  // final String address;
+  final String email;
+  // final String zipcode;
 
   AnnonceList({
     // required this.userId,
     required this.id,
-    required this.titre,
-    required this.description,
-    required this.date,
-    required this.statut_user,
-    required this.position,
+    required this.username,
+    required this.name,
+    // required this.address,
+    required this.email,
+    // required this.zipcode,
   });
 
   factory AnnonceList.fromJson(Map<String, dynamic> json) {
     return AnnonceList(
       // userId: json['userId'],
       id: json['id'],
-      titre: json['titre'],
-      description: json['description'],
-      date: json['date'],
-      statut_user: json['statut_user'],
-      position: json['position'],
+      username: json['username'],
+      name: json['name'],
+      // address: json['address'],
+      email: json['email'],
+      // zipcode: json['zipcode'],
     );
   }
 }
@@ -119,10 +120,10 @@ class _DonateurState extends State<Donateur> {
                     child: ListTile(
                       leading: const Icon(Icons.bloodtype,
                           color: Colors.green, size: 30),
-                      title: Text(snapshot.data![index].titre),
-                      subtitle: Text(snapshot.data![index].statut_user +
+                      title: Text(snapshot.data![index].username),
+                      subtitle: Text(snapshot.data![index].email +
                           " - " +
-                          snapshot.data![index].date),
+                          snapshot.data![index].name),
                       trailing: const Icon(Icons.keyboard_arrow_right),
                       onTap: () {
                         // Navigator.push(
