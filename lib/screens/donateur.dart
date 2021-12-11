@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'chat_screen.dart';
 
 Future<List<AnnonceList>> fetchAnnonceList() async {
   final response = await http.get(
@@ -118,14 +119,53 @@ class _DonateurState extends State<Donateur> {
                   child: Padding(
                     padding: const EdgeInsets.all(6.0),
                     child: ListTile(
-                      leading: const Icon(Icons.bloodtype,
-                          color: Colors.green, size: 30),
+                      leading: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.0),
+                          color: Colors.teal[50],
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(14.0),
+                          child: Icon(Icons.bloodtype,
+                              color: Colors.green, size: 30),
+                        ),
+                      ),
                       title: Text(snapshot.data![index].username),
-                      subtitle: Text(snapshot.data![index].email +
-                          " - " +
-                          snapshot.data![index].name),
-                      trailing: const Icon(Icons.keyboard_arrow_right),
+                      subtitle: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Expanded(
+                              flex: 0,
+                              child: Icon(Icons.location_on_outlined,
+                                  color: Colors.green, size: 15)),
+                          Expanded(
+                            flex: 8,
+                            child: Text(snapshot.data![index].name),
+                          ),
+                          const Expanded(
+                            flex: 0,
+                            child: Icon(Icons.date_range,
+                                color: Colors.green, size: 15),
+                          ),
+                          Expanded(
+                            flex: 0,
+                            child:
+                                Text(' ' + snapshot.data![index].id.toString()),
+                          ),
+                        ],
+                      ),
+                      trailing: const Icon(Icons.add_box_outlined,
+                          color: Colors.green, size: 30),
                       onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ChatScreen(
+                                // peerId: snapshot.data![index].id,
+                                // peerAvatar: snapshot.data![index].name,
+                                ),
+                          ),
+                        );
                         // Navigator.push(
                         //   context,
                         //   MaterialPageRoute(

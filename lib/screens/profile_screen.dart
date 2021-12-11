@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'main_screen.dart';
 import 'about_app_screen.dart';
+import 'chat_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -43,12 +44,24 @@ class ProfileScreen extends StatelessWidget {
                           builder: (context) => const AboutAppScreen()));
                 },
               ),
+              ListTile(
+                title: const Text('Chat'),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ChatScreen(
+                              // peerId: 0,
+                              // peerAvatar: '',
+                              )));
+                },
+              ),
             ],
           ),
         ),
         appBar: AppBar(
           title: const Text('Profile'),
-          // backgroundColor: Colors.transparent.withOpacity(0),
+          backgroundColor: Colors.teal,
         ),
         body: Center(
           child: Padding(
@@ -60,12 +73,14 @@ class ProfileScreen extends StatelessWidget {
                   // backgroundImage: NetworkImage(
                   //   'https://picsum.photos/250?image=9',
                   // ),
+                  backgroundColor: Colors.teal,
                   child: Icon(
                     Icons.person,
                     size: 50,
                     color: Colors.white,
                   ),
                 ),
+                const SizedBox(height: 20),
                 const Text('Profile Name'),
                 const SizedBox(height: 10),
                 TextButton(

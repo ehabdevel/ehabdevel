@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 // import '../api/annonce_service.dart';
 // import '../api/annonce_model.dart';
+import 'chat_screen.dart';
 
 Future<List<UtilisateurList>> fetchUtilisateurList() async {
   final response = await http.get(
@@ -116,26 +117,61 @@ class _DemandeurState extends State<Demandeur> {
                   child: Padding(
                     padding: const EdgeInsets.all(6.0),
                     child: ListTile(
-                      leading: CircleAvatar(
-                        backgroundColor: Colors.red[50],
-                        child: Text('B'),
-                        // Text(snapshot.data![index].annonce_id.toString()),
-                      ),
+                      leading: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            color: Colors.red[50],
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(16.0),
+                            child: Text('O +',
+                                style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.red)),
+                          )),
                       title: Text(snapshot.data![index].username),
-                      subtitle: Text("Desc:" +
-                          snapshot.data![index].name +
-                          // " City " +
-                          // snapshot.data![index].city +
-                          // " country " +
-                          // snapshot.data![index].country +
-                          // " date " +
-                          // snapshot.data![index].date +
-                          // " statut_user " +
-                          // snapshot.data![index].statut_user +
-                          // " user id " +
-                          snapshot.data![index].id.toString()),
-                      trailing: const Icon(Icons.keyboard_arrow_right),
+                      subtitle: Row(
+                        children: [
+                          const Expanded(
+                            flex: 0,
+                            child: Icon(
+                              Icons.location_on_outlined,
+                              size: 15,
+                              color: Color(0xFFEF9A9A),
+                            ),
+                          ),
+                          Expanded(
+                              flex: 8, child: Text(snapshot.data![index].name)),
+                          const Expanded(
+                            flex: 0,
+                            child: Icon(
+                              Icons.date_range_outlined,
+                              size: 15,
+                              color: Color(0xFFEF9A9A),
+                            ),
+                          ),
+                          Expanded(
+                              flex: 1,
+                              child: Text(
+                                  ' ' + snapshot.data![index].id.toString())),
+                        ],
+                      ),
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        size: 50,
+                        color: Color(0xFFEF9A9A),
+                      ),
                       onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ChatScreen(
+                                // peerId: snapshot.data![index].id,
+                                // peerAvatar: '',
+                                ),
+                          ),
+                        );
                         // Navigator.push(
                         //   context,
                         //   MaterialPageRoute(
