@@ -1,6 +1,6 @@
 ### Hi there, I am Ehab 👋
 
-- 🔭 I’m currently working on Full Stack Development.
+- 🔭 Currently working on Full Stack Development.
 - 🌱 As an always learner, i'm curious to learn a bit of everything ...
 - Flutter, Python(Django), Javascript, Vue, React, PHP(WordPress, Laravel), and more ...
 
