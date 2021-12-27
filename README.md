@@ -1,5 +1,8 @@
 ### Hi there, I am Ehab 👋
 
+<a href="https://www.linkedin.com/in/ehabdevel/"><img align="left" alt="LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /></a><a href="https://twitter.com/ehabdevel"><img align="left" alt="Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" /></a> <a href="https://github.com/ehabdevel"><img align="left" alt="Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" /></a>
+<br />
+
 - 🔭 Currently working on Full Stack Development.
 - 🌱 As an always learner, i'm curious to learn a bit of everything ...
 - Flutter, Python(Django), Javascript, Vue, React, PHP(WordPress, Laravel), and more ...
