@@ -1,10 +1,8 @@
-### Hi 👋
+### Hi there, I am Ehab 👋
 
-
-I'm Ehab, a passionate ***Software Developer***
-
-- 🔭 I’m mostly working on Flutter, Javascript, Vue, React, PHP(WordPress, Laravel), Python(Django), and some more ...
+- 🔭 I’m currently working on Full Stack Development.
 - 🌱 As an always learner, i'm curious to learn a bit of everything ...
+- Flutter, Python(Django), Javascript, Vue, React, PHP(WordPress, Laravel), and more ...
 
 - 📫 How to reach me: https://ehabdevel.github.io/ ...
 
