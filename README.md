@@ -1,7 +1,7 @@
 ### Hi 👋
 
 
-***I'm Ehab, a passionate Software Developer ***
+I'm Ehab, a passionate ***Software Developer***
 
 - 🔭 I’m mostly working on Flutter, Javascript, Vue, React, PHP(WordPress, Laravel), Python(Django), and some more ...
 - 🌱 As an always learner, i'm curious to learn a bit of everything ...
