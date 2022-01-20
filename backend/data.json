@@ -1,0 +1,102 @@
+[
+    {
+        "model": "utilisateurs.CustomUser",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$180000$nFcBtiqGnWN9$hf58wNg77oT1BlNKRdATVVvBIa69+dz22fL1JKOKTaA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user1",
+            "first_name": "",
+            "last_name": "",
+            "email": "user1@email.com",
+            "is_staff": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "utilisateurs.CustomUser",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$180000$nFcBtiqGnWN9$hf58wNg77oT1BlNKRdATVVvBIa69+dz22fL1JKOKTaA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user2",
+            "first_name": "",
+            "last_name": "",
+            "email": "user2@email.com",
+            "is_staff": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "utilisateurs.CustomUser",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$180000$nFcBtiqGnWN9$hf58wNg77oT1BlNKRdATVVvBIa69+dz22fL1JKOKTaA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user3",
+            "first_name": "",
+            "last_name": "",
+            "email": "user3@email.com",
+            "is_staff": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "utilisateurs.CustomUser",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$180000$nFcBtiqGnWN9$hf58wNg77oT1BlNKRdATVVvBIa69+dz22fL1JKOKTaA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user4",
+            "first_name": "",
+            "last_name": "",
+            "email": "user4@email.com",
+            "is_staff": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "annonce.Demand",
+        "pk": 1,
+        "fields": {
+            "title": "Urgent for old man",
+            "blood_type": "OP",
+            "address1": "Al Salam Hospital, street nr 9 beside Post Office",
+            "address2": false,
+            "address3": false,
+            "city": "Cairo",
+            "country": "Egypt",
+            "demander_name": "Mohamed Hasan",
+            "contact_name": "Ahmed Hasan",
+            "contact_tel": "+201012345789",
+            "notes": "Please needed today or tomorrow at most.",
+            "date_created": "2022-1-4 06:00",
+            "status": false,
+            "author": 5
+        }
+    },
+    {
+        "model": "annonce.Demand",
+        "pk": 2,
+        "fields": {
+            "title": "For operation",
+            "blood_type": "ABP",
+            "address1": "5 Horah street",
+            "address2": "Dr, Mostafa clinic",
+            "address3": false,
+            "city": "Rabat",
+            "country": "Morocco",
+            "demander_name": "Mohamed Mahfouz",
+            "contact_name": "Ayah Sabre",
+            "contact_tel": "+201012345789",
+            "notes": "For my father operation, please help me, the doctor is waiting for this blood type to start the operation, if you have any questions about this information contact me.",
+            "date_created": "2022-1-4 06:00",
+            "status": false,
+            "author": 3
+        }
+    }
+  ]
