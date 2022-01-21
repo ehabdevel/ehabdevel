@@ -43,6 +43,7 @@ class GraphQLConfiguration {
   //   }
 
   static HttpLink httpLink = HttpLink(
+    'https://sos-blood-backend.herokuapp.com/graphql',
     // Uri.parse(authenticationState.authenticationToken != null &&
     //         authenticationState.authenticationToken.isNotEmpty
     //     ? graphEndPoint
@@ -50,7 +51,7 @@ class GraphQLConfiguration {
     // 'http://10.0.2.2:8000/graphql',
     // 'http://127.0.0.1:8000/graphql',
     // 'http://localhost:8000/graphql',
-    graphEndPoint,
+    // graphEndPoint,
     // defaultHeaders: <String, String>{
     //   'authenticationToken': 'Bearer ${AuthenticationState.authenticationToken}',
     //   'Authorization': 'Bearer ${AuthenticationState.authenticationToken}',
