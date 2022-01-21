@@ -5,7 +5,7 @@ from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
 
-from .models import Demand
+from annonce.models import Demand
 
 # Create your views here.
 class IndexView(generic.ListView):

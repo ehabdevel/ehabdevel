@@ -67,6 +67,6 @@ class Demand(models.Model):
     class Meta:
         ordering = ['-publish_date']
 
-    # def __init__(self, *args):
-    #     super(Demand, self).__init__(*args))
+    def __init__(self, *args):
+        super(Demand, self).__init__(*args)
 

@@ -1,4 +1,5 @@
 import graphene
+from graphql_jwt.decorators import login_required
 
 from graphql_auth.schema import UserQuery, MeQuery
 from django.contrib.auth import get_user_model
@@ -41,25 +42,31 @@ class Query(UserQuery, MeQuery, graphene.ObjectType):
     # all_profiles = graphene.List(ProfileType)
     profile = graphene.Field(ProfileType, id=graphene.Int())
 
+    # @login_required
     def resolve_all_demands(root, info, **kwargs):
         return models.Demand.objects.select_related('author').all()
 
+    # @login_required
     def resolve_demand(root, info, **kwargs):
         id = kwargs.get('id')
         if id is not None:
             return models.Demand.objects.select_related('author').get(pk=id)
         return None
 
+    # @login_required
     def resolve_author_by_username(root, info, username):
         return models.Profile.objects.select_related('user').get(user__username=username)
 
+    # @login_required
     def resolve_demand_by_author(root, info, username):
         return models.Demand.objects.select_related('author').filter(author__user__username=username)
 
+    # @login_required
     def resolve_all_profiles(root, info, **kwargs):
         # return models.Profile.objects.select_related('user').all()
         return models.Profile.objects.select_related('user').filter(isDonator=kwargs.get('isDonator'))
 
+    # @login_required
     def resolve_profile(root, info, **kwargs):
         id = kwargs.get('id')
         if id is not None:

@@ -22,7 +22,8 @@ from graphene_django.views import GraphQLView
 from annonce.views import IndexView, DetailView
 
 urlpatterns = [
+    url('', include('annonce.urls')),
     path('admin/', admin.site.urls),
     path("graphql", csrf_exempt(GraphQLView.as_view(graphiql=True))),
-    url(r'^', include('annonce.urls')),
+    # url(r'^', include('annonce.urls')),
 ]

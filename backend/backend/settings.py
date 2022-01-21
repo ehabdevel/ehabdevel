@@ -28,12 +28,13 @@ SECRET_KEY = 'django-insecure-b1duxl#49j%e88)tww&w@04@2#4ync%tt7xn)1dovf&ck2xz5!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.0.2.2', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['10.0.2.2', '127.0.0.1', 'localhost', 'sos-blood-backend.herokuapp.com']
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = (
     'http://10.0.2.2:8000',
     'http://127.0.0.1:8000',
     'http://localhost:8000',
+    'https://sos-blood-backend.herokuapp.com',
 )
 
 
