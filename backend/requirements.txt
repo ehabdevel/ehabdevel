@@ -3,3 +3,8 @@ graphene-django==2.15.0
 django-graphql-jwt==0.3.0
 django-graphql-auth==0.3.16
 django-cors-headers==3.10.1
+whitenoise
+django-heroku
+psycopg2
+dj-database-url
+gunicorn
